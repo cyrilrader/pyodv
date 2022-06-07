@@ -7,11 +7,11 @@
 
 """
 
-from .base import MyModel
+from .base import ODV_Struct
 from .__version__ import __version__
 import logging
 
-__all__ = ['MyModel', '__version__']
+__all__ = ['ODV_Struct', '__version__']
 
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())

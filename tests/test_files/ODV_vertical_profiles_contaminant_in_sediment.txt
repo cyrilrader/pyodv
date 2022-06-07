@@ -1,0 +1,26 @@
+//
+//<sdn_reference xlink:href="http://seadata.bsh.de/cgi-csr/XML/xmlDownload_V2.pl?edmo=269&identifier=GN36199704604" xlink:role="isObservedBy" xlink:type="SDN:L23::CSR"/>
+//<sdn_reference xlink:href="http://vocab.nerc.ac.uk/collection/C17/current/36AE" xlink:role="isObservedBy" xlink:type="SDN:L23::NVS2CON"/>
+//<sdn_reference xlink:href="http://seadatanet.maris2.nl/v_cdi_v3/print_xml.asp?edmo=269&identifier=GN36199764604001_0MNB4_269_G04" xlink:role="isDescribedBy" xlink:type="SDN:L23::CDI" sdn:scope="269:GN36199764604001_0MNB4_269_G04"/>
+//<sdn_reference xlink:href="http://seadatanet.maris2.nl/v_cdi_v3/print_xml.asp?edmo=269&identifier=GN36199764604001_0MSB5_269_G04" xlink:role="isDescribedBy" xlink:type="SDN:L23::CDI" sdn:scope="269:GN36199764604001_0MSB5_269_G04"/>
+//<sdn_reference xlink:href="http://seadatanet.maris2.nl/v_cdi_v3/print_xml.asp?edmo=269&identifier=GN36199764604001_0MSB6_269_G04" xlink:role="isDescribedBy" xlink:type="SDN:L23::CDI" sdn:scope="269:GN36199764604001_0MSB6_269_G04"/>
+//SDN_parameter_mapping
+//<subject>SDN:LOCAL:COREDIST</subject><object>SDN:P01::COREDIST</object><units>SDN:P06::ULAA</units>
+//<subject>SDN:LOCAL:Lithium Li</subject><object>SDN:P01::LISEDAD1</object><units>SDN:P06::UMKG</units>
+//<subject>SDN:LOCAL:Scandium Sc</subject><object>SDN:P01::HCMR0011</object><units>SDN:P06::UMKG</units>
+//<subject>SDN:LOCAL:Titanium Ti</subject><object>SDN:P01::RWSSED04</object><units>SDN:P06::UGKG</units>
+//<subject>SDN:LOCAL:Vanadium V</subject><object>SDN:P01::RWSSED02</object><units>SDN:P06::UMKG</units>
+//
+Cruise	Station	Type	YYYY-MM-DDThh:mm:ss.sss	Longitude [degrees_east]	Latitude [degrees_north]	LOCAL_CDI_ID	EDMO_code	Bot. Depth [m]	COREDIST [m]	QV:SEADATANET	Lithium Li [mg/kg]	QV:SEADATANET	Scandium Sc [mg/kg]	QV:SEADATANET	Titanium Ti [g/kg]	QV:SEADATANET	Vanadium V [mg/kg]	QV:SEADATANET
+MTPII-MATER/M2BN-AUG97	MNB4	*	1997-09-01T00:00:00.000	25.511	39.778	GN36199764604001_0MNB4_269_G04	269	95	0.005	1	0	1	0	1	0	1	0	1
+									0.105	1	0	1	0	1	0	1	0	1
+									0.205	1	0	1	0	1	0	1	0	1
+MTPII-MATER/M2BN-AUG97	MSB5	*	1997-09-01T00:00:00.000	24.683	36.193	GN36199764604001_0MSB5_269_G04	269	1255	0.005	1	0	1	0	1	0	1	0	1
+									0.105	1	0	1	0	1	0	1	0	1
+									0.205	1	0	1	0	1	0	1	0	1
+									0.26	1	0	1	0	1	0	1	0	1
+									0.315	1	0	1	0	1	0	1	0	1
+MTPII-MATER/M2BN-AUG97	MSB6	*	1997-09-01T00:00:00.000	25.705	36	GN36199764604001_0MSB6_269_G04	269	1300	0.005	1	0	1	0	1	0	1	0	1
+									0.055	1	0	1	0	1	0	1	0	1
+									0.155	1	0	1	0	1	0	1	0	1
+									0.29	1	0	1	0	1	0	1	0	1
