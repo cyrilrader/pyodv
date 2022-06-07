@@ -20,7 +20,7 @@ class TestStringMethods(unittest.TestCase):
     #         s.split(2)
 
     def test_modelError(self): 
-        test_files = './test_files/'
+        test_files = './tests/test_files/'
         all_valid = True
         for filename in os.listdir(test_files ):
             f = os.path.join(test_files, filename)
