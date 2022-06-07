@@ -1,16 +1,17 @@
-pyodv
-===================================
+# pyodv
+-----
 
 [![Upload Python Package](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml/badge.svg)](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml)
 
 [![Checking Master Branch](https://github.com/vliz-be-opsci/pyodv/actions/workflows/build-master.yml/badge.svg)](https://github.com/vliz-be-opsci/pyodv/actions/workflows/build-master.yml)
 
+-----
 
 Python package for reading ODV (Ocean Data Variables) files
 
 Started on 2022-05-13
 
-Setup
+## Setup
 -----
 Start using this project in a virtual environment
 
@@ -35,8 +36,8 @@ Build Docs
 
 
 
-Developers
-----------
+## Developers
+-----
 
 Run Tests
 
