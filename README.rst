@@ -1,6 +1,9 @@
 pyodv
 ===================================
 
+[![Upload Python Package](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml/badge.svg)](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml)
+
+
 Python package for reading ODV (Ocean Data Variables) files
 
 Started on 2022-05-13
