@@ -3,6 +3,8 @@ pyodv
 
 [![Upload Python Package](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml/badge.svg)](https://github.com/vliz-be-opsci/pyodv/actions/workflows/python-publish.yml)
 
+[![Checking Master Branch](https://github.com/vliz-be-opsci/pyodv/actions/workflows/build-master.yml/badge.svg)](https://github.com/vliz-be-opsci/pyodv/actions/workflows/build-master.yml)
+
 
 Python package for reading ODV (Ocean Data Variables) files
 
