@@ -19,10 +19,10 @@ class TestStringMethods(unittest.TestCase):
     #     with self.assertRaises(TypeError):
     #         s.split(2)
 
-    def test_modelError(self): 
+    def test_modelError(self):
         test_files = './tests/test_files/'
         all_valid = True
-        for filename in os.listdir(test_files ):
+        for filename in os.listdir(test_files):
             f = os.path.join(test_files, filename)
             # checking if it is a file
             if os.path.isfile(f):
@@ -36,7 +36,6 @@ class TestStringMethods(unittest.TestCase):
                     log.warning(err)
 
         self.assertTrue(all_valid)
-     
 
 
 if __name__ == "__main__":
