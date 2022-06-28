@@ -38,7 +38,22 @@ The parsed_file object has several child objects and functions. Here are several
   - parsed_file.params: Semantic paramater header items, as a python dictionary.
   - parsed_file.refs: Links to external references listed in ODV header, as a python dictionary.
   
+## Future Work
+Currently the ODV/BioODV files used for development are limited to those available [here](https://www.seadatanet.org/Standards/Data-Transport-Formats). These example files seem to be output from the same tool-chain so any differences with ODV files "out in the wild" have not been considered. It would be worth while to expand source, creation tools, and style of the ODV files in the test directory. 
 
+The ODV parsing tool can be improved with:
+  
+  - improve limited testing currently done on the data struct
+  - handle several common use cases:
+    - write to file,
+    - push data to database,
+    - convert to some other format (csv, DWCa, TTL, etc)
+  - More comprehensive parsing of the semantic header:
+    -  retrieve link URLs for vocab terms
+    -  check URLs are valid, correctly formatted and available
+    -  check the units used in the columns comply with those defined in semantic parameter header
+  - Better data structure:
+    - Multiple dataframes are not the best structure for complex slicing. XArray might be a better tool but also does not seem to treat data parameters well. 
 
 ## Testing 
 
