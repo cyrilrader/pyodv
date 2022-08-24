@@ -1,6 +1,7 @@
 import pandas as pd
 import io
 import xmltodict
+import logging
 from bs4 import BeautifulSoup
 
 
@@ -203,30 +204,30 @@ class ODV_Struct(object):
         good_file = False
 
         if len(self.params) > 0:
-            print(f'Has {len(self.params)} params')
+            logging.debug(f'Has {len(self.params)} params')
             good_file = True
         else:
-            print('WARNING: No params parsed...')
+            logging.warning('WARNING: No params parsed...')
             good_file = False
 
         if len(self.refs) > 0:
-            print(f'Has {len(self.refs)} refs.')
+            logging.debug(f'Has {len(self.refs)} refs.')
             good_file = True
         else:
-            print('WARNING: No refs parsed...')
+            logging.warning('WARNING: No refs parsed...')
             good_file = False
 
         if self.df_qc.shape == self.df_var.shape:
-            print('Good file shape')
+            logging.debug('Good file shape')
             good_file = True
         else:
-            print('WARNING: Bad qc/var dimensions')
+            logging.warning('WARNING: Bad qc/var dimensions')
             good_file = False
 
         if self.valid_odv:
             good_file = True
         else:
-            print('WARNING: Non-valid ODV file')
+            logging.warning('WARNING: Non-valid ODV file')
             good_file = False
 
         return good_file
@@ -264,9 +265,9 @@ class ODV_Struct(object):
                 except Exception as err:
                     # Possible Comment
                     self.comments.append(line)
-                    print('--Problem Parsing Refs--')
-                    print(err)
-                    print(line)
+                    logging.debug('--Problem Parsing Refs--')
+                    logging.debug(err)
+                    logging.debug(line)
         return parsed_list
 
     def parse_psuedo_params(self, xml_lines):
@@ -282,7 +283,7 @@ class ODV_Struct(object):
                 soup_dict = xmltodict.parse('<root>' + str(soup) + '</root>')['root']
                 parsed_list.append(soup_dict)
             except Exception as err:
-                print('--Problem Parsing Params--')
-                print(err)
-                print(line)
+                logging.warning('--Problem Parsing Params--')
+                logging.warning(err)
+                logging.warning(line)
         return parsed_list

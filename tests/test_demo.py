@@ -2,9 +2,8 @@ import unittest
 from util4tests import run_single_test, log
 import os
 
-from pyodv import ODV_Struct
-
-
+from pyodv import ODV_Struct  
+ 
 class TestStringMethods(unittest.TestCase):
     # def test_upper(self):
     #     log.info("testing str.upper()")
