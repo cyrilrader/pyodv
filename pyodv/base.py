@@ -4,6 +4,7 @@ import xmltodict
 import logging
 from bs4 import BeautifulSoup
 
+log = logging.getLogger('pyodv')
 
 class ODV_Struct(object):
     def __init__(self, odv_path):
@@ -19,7 +20,7 @@ class ODV_Struct(object):
 
         # Check Input Validity
         if not self.valid_input():
-            print('Bad Input file')
+            log.warning('Bad Input file')
 
         # Make Valid if not valid
         # TODO: Figure out the edge cases that break the normal flow and fix'em
