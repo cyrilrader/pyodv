@@ -62,13 +62,23 @@ class ODV_Struct(object):
         Read file into pandas dataframe without
         doing too much guesswork on structure
         '''
-        with open(odv_path) as f:
-            lines = f.read()
+        try:
+            # Try to read it with UTF-8 encoding, if that fails
+            # try to read it with Latin-1 encoding. If that fails
+            # just read it with UTF-8 and ignore any errors.
+            with open(odv_path, encoding='utf8') as f:
+                    lines = f.read()
+        except UnicodeDecodeError:
+            try:
+                with open(odv_path, encoding='latin1') as f:
+                        lines = f.read()
+            except:
+                with open(odv_path, encoding='utf8', errors="ignore") as f:
+                    lines = f.read()
 
         split = lines.rsplit('\n//', 1)
         self.odv_df = pd.read_csv(io.StringIO(split[1]), sep='\t')
         self.odv_header = split[0]
-
         return
 
     def odv_format(self):
