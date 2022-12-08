@@ -68,13 +68,20 @@ class ODV_Struct(object):
             # just read it with UTF-8 and ignore any errors.
             with open(odv_path, encoding='utf8') as f:
                     lines = f.read()
+            split = lines.rsplit('\n//', 1)
+            self.odv_df = pd.read_csv(io.StringIO(split[1]), sep='\t')
         except UnicodeDecodeError:
             try:
                 with open(odv_path, encoding='latin1') as f:
                         lines = f.read()
+                split = lines.rsplit('\n//', 1)
+                self.odv_df = pd.read_csv(io.StringIO(split[1]), sep='\t', encoding='latin1')
+                
             except:
                 with open(odv_path, encoding='utf8', errors="ignore") as f:
                     lines = f.read()
+                split = lines.rsplit('\n//', 1)
+                self.odv_df = pd.read_csv(io.StringIO(split[1]), sep='\t')
 
         split = lines.rsplit('\n//', 1)
         self.odv_df = pd.read_csv(io.StringIO(split[1]), sep='\t')
