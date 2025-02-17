@@ -128,7 +128,7 @@ class ODV_Struct(object):
 
         Also combine the variables into a multidimensional XArray
         '''
-        self.df_data = self.odv_df[self.cols_data].fillna(method='ffill')
+        self.df_data = self.odv_df[self.cols_data].ffill()
         self.df_var = self.odv_df[self.cols_variable]
         self.df_qc = self.odv_df[self.cols_quality]
         return
